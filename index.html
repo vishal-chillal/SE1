@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/myScript.js"></script>
+		<link rel="stylesheet" href="style/new.css">
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta content="utf-8" http-equiv="encoding">
+	</head>
+	<body>
+		<div class="input_text" >
+			Add/Edit Type : <input id="input_box" type="text" onfocus="helpAddEdit()" > <br>
+			<div class="number"> </div>
+		</div>
+
+		<div class="construction_box">
+			<div class="list_super" onfocus="helpSubSuperCons()">
+				<select id="super_type_construct" multiple size="1" multiple > </select>
+			</div>
+			<div class="list_type">
+				<select id="select_type_list" multiple size="1" onfocus="helpTypeSel()"> </select>
+			</div>
+			<div class="list_sub" onfocus="helpSubSuperCons()">
+				<select id="sub_type_construct" multiple size="1" multiple> </select>
+			</div>
+			<div class="DAG">
+				<br>
+				<button id="button_load" type="button">Load</button><br>
+				<textarea id="string_dag" rows="5" cols="40" id="text_DAG" type="text"></textarea>
+			</div>
+		</div>
+		<div class="msg">msg:
+
+		</div>
+		<div class="help_session1">
+			Help : (add/edit session)<br>
+			[Enter] button : Add type to list.<br>
+			[Up-arrow][Down-arrow] button : To add type & go to session2.<br>
+		</div>
+		<div class="help_session2">
+			Help : (selection of type)
+			[Up-arrow][Down-arrow] button : To Navigate selection. <br>
+			[Enter] button : To edit & add new type.<br>
+			[Insert] button : Edit & modify selected type.<br>
+			[Delete] button : Delete selected type.<br>
+			[Left-arrow] button : Press left arrow to select current type for super type & go to subtype selection.<br>
+			[Right-arrow] button: Press right arrow to select current type as subtype & go to supertype selection.<br>
+
+		</div>
+		<div class="help_session3">
+
+			Help : (subtype selection session) <br>
+			[Up-arrow][Down-arrow] button : To Navigate selection. <br>
+			[spacebar] button : To toggle the selection of super type. <br>
+			[Left-arrow] button : Save & supertype selection session & go to session2. <br>
+			[ESC] button : To discard the changes exit & redirect it to session1. <br>
+		</div>
+	</body>
+</html>
